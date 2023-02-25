@@ -38,7 +38,7 @@
 }
 
 .content {
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
     background-color: var(--main-bg-color);
     background-image: url('../images/3.png'), url('../images/heart-max.png');
@@ -174,6 +174,7 @@
 .features {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 65%;
     margin: 0 auto;
 }
@@ -202,6 +203,7 @@
 .card-block {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 70%;
     padding-bottom: 70px;
@@ -415,4 +417,44 @@ button:hover {
 
 .footer__logo {
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .main-content {
+        background-image: none;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .address-block__img, .reviews__img {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 3%;
+        padding-top: 2%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .main-content {
+        background-image: none;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .address-block__img, .reviews__img {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 3%;
+        padding-top: 2%;
+    }
 }
